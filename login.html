@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Account | Floré</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="Images/favicon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+  <h1>Floré</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="login.html">Account</a>
+  </nav>
+</header>
+
+<div class="account-page">
+  <div class="account-container">
+
+    <div class="account-image">
+      <img src="Images/shop.png" alt="Floré flower shop">
+    </div>
+
+    <div class="form-container">
+
+      <div class="form-btn">
+        <span onclick="login()">Login</span>
+        <span onclick="register()">Register</span>
+        <div id="Indicator"></div>
+      </div>
+
+      <form id="LoginForm">
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit" class="btn">Login</button>
+        <a href="reset.html">Forgot password?</a>
+      </form>
+
+      <form id="RegForm">
+        <input type="text" placeholder="Username" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit" class="btn">Register</button>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>© 2026 Floré. Hand made with care.</p>
+</footer>
+
+<script>
+  var LoginForm = document.getElementById("LoginForm");
+  var RegForm = document.getElementById("RegForm");
+  var Indicator = document.getElementById("Indicator");
+
+  register(); // default view
+
+  function register() {
+    LoginForm.style.display = "none";
+    RegForm.style.display = "block";
+    Indicator.style.transform = "translateX(100%)";
+  }
+
+  function login() {
+    LoginForm.style.display = "block";
+    RegForm.style.display = "none";
+    Indicator.style.transform = "translateX(0)";
+  }
+</script>
+
+</body>
+</html>

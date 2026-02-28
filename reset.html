@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reset Password | Floré</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="Images/favicon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+  <h1>Floré</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#flowers">Flowers</a>
+    <a href="login.html">Account</a>
+  </nav>
+</header>
+    <div class="reset-container">
+        <h2>Reset Password</h2>
+             <p>Enter your email below.</p>
+
+             <input type="email" placeholder="Enter your email" id="resetEmail" required>
+
+             <button class="btn" onclick="resetPassword()">Reset Password</button>
+
+             <p id="ResetMessage" class="reset-message"></p>
+
+         <a href="login.html">← Back to Login</a>
+    </div>
+
+<footer class="footer">
+  <p>© 2026 Floré. Hand made with care.</p>
+  <hr>
+  <p class="copyright">Copyright 2026 - Floré</p>
+</footer>
+
+<script>
+function resetPassword() {
+    var msg = document.getElementById("ResetMessage");
+    var email = document.getElementById("resetEmail").value;
+
+    if (email === "") {
+        msg.innerHTML = "Please enter your email.";
+        msg.style.color = "red";
+    } else {
+        msg.innerHTML = "Email sent! Please check your inbox 💌";
+        msg.style.color = "green";
+    }
+}
+</script>
+
+</body>
+</html>

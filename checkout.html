@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout | Floré</title>
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="icon" type="image/x-icon" href="Images/favicon.png">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">Floré</div>
+    <nav class="nav-links">
+        <a href="shop.html">Shop</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+</header>
+
+<section class="checkout-container">
+    <h2>Checkout</h2>
+
+    <input type="text" placeholder="Full Name">
+    <input type="text" placeholder="Address">
+    <input type="text" placeholder="Phone Number">
+
+    <h3>Payment Method</h3>
+
+    <label class="payment-option">
+        <input type="radio" name="payment" checked>
+        Credit / Debit Card
+    </label>
+
+    <label class="payment-option">
+        <input type="radio" name="payment">
+        UPI Payment
+    </label>
+
+    <label class="payment-option">
+        <input type="radio" name="payment">
+        Cash on Delivery
+    </label>
+
+    <button onclick="placeOrder()">Place Order</button>
+</section>
+
+<footer class="footer">
+    <p>© 2026 Floré. Hand made with care | All rights reserved</p>
+</footer>
+
+<script src="checkout.js"></script>
+
+</body>
+</html>
