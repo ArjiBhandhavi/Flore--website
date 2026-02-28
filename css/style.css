@@ -635,3 +635,18 @@ input {
   margin-top: 80px;
 }
 
+@media (max-width: 768px) {
+  .account-container {
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .account-image {
+    width: 100%;
+  }
+
+  .account-form {
+    width: 100%;
+  }
+}
